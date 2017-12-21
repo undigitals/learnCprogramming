@@ -1,11 +1,20 @@
 #include <stdio.h>
-#include <corecrt_math.h>
 
 int main() {
-	const double  PI = 3.141593;  // declaring const with const key makes real constant we 
-								  // we cannot redefine it
-	printf("%.6f\n", PI);
+	char agestring[10];
+	int age;
+	int bonus;
 
+	printf("Enter your age: ");
+	gets(agestring);
+	age = atoi(agestring); // atoi is a function convert string to int 
+	if (age > 45) {
+		bonus = 1000;
+	}
+	else {
+		bonus = 500;
+	}
+	printf("Your age is %i, so you get %i", age, bonus);
+	getchar();
 	return 0;
-
 }
