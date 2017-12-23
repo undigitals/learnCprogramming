@@ -15,8 +15,8 @@ void flush_input() //cleans the buffer from extra memory which more than initial
 				
 {
 	int ch=0; // int var ch -> takes the extra memory but it does not print it!!
-	while ((ch = getc(stdin)) != '\n' && ch != EOF);  // this line prevents from pressing enter 
-													// like for example if you press enter it doesnot count as '\n'
+	while ((ch = getc(stdin)) != '\n' && ch != EOF);// it reads char which overflowed and stayed in the buffer till '\n' or EOF !!!!  
+													
 	
 }
 
